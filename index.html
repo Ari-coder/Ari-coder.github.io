@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&display=swap');
+
+        * {
+
+            margin: 0;
+
+            padding: 0;
+
+        }
+
+        body {
+
+            display: flex;
+
+            flex-direction: row;
+
+            justify-content: center;
+
+            align-items: center;
+
+            height: 100%;
+
+            width: 100%;
+
+            background-image: url("https://i.ibb.co/vH4pb7J/IMG-20220601-113907-926.jpg");
+
+            background-repeat: no-repeat;
+
+            background-size: cover;
+
+            background-position: center;
+
+        }
+
+        main {
+
+            width: 80%;
+
+            height: 50%;
+
+            display: flex;
+
+            flex-direction: column-reverse;
+
+            justify-content: center;
+
+            align-items: center;
+
+            background: rgba(0, 0, 0, .2);
+
+            border-radius: 16px;
+
+            box-shadow: 10px 7px 50px rgba(256,256,256,62);
+
+            backdrop-filter: blur(0.4px);
+
+            -webkit-backdrop-filter: blur(5px);
+
+            border: 1px solid rgba(256,256,255,0.4);
+
+            padding: 1rem;
+
+        }
+
+        h1 {
+
+            text-align: center;
+
+            letter-spacing: 1px;
+
+            font-size: 26px;
+
+            color: #f5f6f8;
+
+            font-style: italic;
+
+            font-family: "Raleway",sans-serif;
+
+            margin-bottom: 2em;
+
+            font-weight: 600;
+
+            line-height: 35px;
+
+        }
+
+        p {
+
+            color: #f5f6f8;
+
+            font-weight: 300;
+
+            text-decoration: underline;
+
+            font-style: italic;
+
+            font-family: "Raleway", sans-serif;
+
+            font-size: 17px;
+
+            letter-spacing: 1px;
+
+        }
+
+        
+
+    </style>
+
+    <title>HTML</title>
+
+</head>
+
+<body>
+
+    <main>
+
+        <p class="p">
+
+            Pidi Baiq
+
+        </p>
+
+        <h1 class="h"> Aku tidak ingin mengekangmu, terserah! Bebas kemana engkau pergi! Asal aku ikut</h1>
+
+    </main>
+
+    <script>
+
+        var quotes = [
+
+            {
+
+                quote:"Aku adalah sinar silau panasmu dan bayang-bayang hangat mentarimu, bumi pasrah langitmu",
+
+                source: "Gus Mus"
+
+            },
+
+            {
+
+                quote:"Wahai, rembulan yang pudar. Jenguklah kekasihku! Ia tidur sendirian, hanya berteman hatinya yang rindu",
+
+                source: "W.S.Rendra"
+
+            },
+
+            {
+
+                quote:"Kenapa tisu bermanfaat, karena cinta tak pernah kemarau",
+
+                source: "Sujiwo Tejo"
+
+            },
+
+            {
+
+                quote: "Pada awalnya, cinta itu bisa melihat. Tapi, menjadi buta karena masuk ke dalam hati yang paling dalam",
+
+                source: "Pidi Baiq"
+
+            }, 
+
+            {
+
+                quote: "Aku tidak bisa berjanji untuk menjadi yang baik. Tapi, aku berjanji akan selalu mendampingi kamu",
+
+                source: "Habibi & Ainun"
+
+            }, 
+
+            {
+
+                quote: "Aku tidak ingin mengekangmu, terserah! Bebas kemana engkau pergi! Asal aku ikut",
+
+                source: "Pidi Baiq"
+
+            }];
+
+            function getRandom() {
+
+                var randomNumber = Math.floor(Math.random() * (quotes.length));
+
+                var randomquote = quotes[randomNumber];
+
+                return randomquote;
+
+            }
+
+            function printquote() {
+
+                var ab = getRandom();
+
+                var p = document.querySelector(".p");
+
+                var h = document.querySelector(".h");
+
+                p.innerHTML = ab.source;
+
+                h.innerHTML = ab.quote;
+
+            }
+
+            window.setInterval(function() {
+
+                printquote();
+
+            },5000)
+
+    </script>
+
+</body>
